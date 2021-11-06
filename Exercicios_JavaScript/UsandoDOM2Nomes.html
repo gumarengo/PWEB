@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste DOM</title>
+    <script>
+        /* vários exemplos como mudar title do form
+                                 document.forms[0].title = "Mudei o título 1";
+                				   document.forms["Formulario1"].title = "Mudei o título 2";
+                				   document.forms.Formulario1.title = "Mudei o título 3";
+                				document.Formulario1.title = "Mudei o titulo4;"
+                				*/
+
+        function validarDados() {
+            
+            // usando a posicao no formulario
+            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 3) {
+                alert("Preencha campo NOME corretamente!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
+            // usando o nome no formulario
+            if (document.forms.formulario1.elements["idEmail"].value == "" || document.forms.formulario1.elements["idEmail"].value.indexOf('@') == -1 || document.forms.formulario1.elements["idEmail"].value.indexOf('.') == -1) {
+                alert("Preencha campo E-MAIL corretamente!");
+                document.forms.formulario1.elements.idEmail.focus();
+               return false;
+            }
+
+            //usando o nome no formulario  de maneira direta
+            if (document.forms.formulario1.elements.idMensagem.value == "" || document.forms.formulario1.elements.idMensagem.value.length < 50) {
+                alert("É necessario preencher o campo MENSAGEM com mais de 50 caracteres!");
+                document.getElementById("idMensagem").focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form action="teste" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+        <div id="principal" width=200 heigth=200 align=center>
+            Nome Completo:
+            <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <br> E-Mail :
+            <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <br> Mensagem :
+            <textarea name="idMensagem" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+            <br>
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Submit">
+            <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+        </div>
+    </form>
+</body>
+
+</html>

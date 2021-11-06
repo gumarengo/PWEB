@@ -1,0 +1,57 @@
+<html>
+<title>Exemplo de Cookie</title>
+
+<head>
+    <script>
+        // recebe o nome do cookie e dias para expirar 
+        function criaCookie(name, exdays) { //função para criar cookie
+            var expires;
+
+            var date;
+
+            var value;
+            date = new Date(); //  data atual
+            // correspondente a um dia
+            date.setTime(date.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            expires = date.toUTCString();
+            value = document.forms.formulario1.elements["curso1"].value;
+            document.cookie = name + "=" + value + "; expires=" + expires + "; path=/";
+        }
+
+        function leCookie(name) {
+            var c_name = document.cookie; // listando o nome de todos os cookies
+            if (c_name != undefined && c_name.length > 0) // verificando se o mesmo existe
+            {
+                var posCookie = c_name.indexOf(name); // checando se existe o cookie 
+                if (posCookie >= 0) //se existir o cookie mostra um alert 
+                {
+                    alert("Cookie encontrado!!!");
+                } else
+                    alert("Cookie não encontrado!!!");
+            }
+            else
+                alert("Cookie não encontrado!!!"); 
+        }
+
+        function excluiCookie(name) {
+            criaCookie(name, -1); // deletando o cookie coloca a data expiracao anterior
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Exemplo de cookie</h2>
+    <form name="formulario1">
+        <h4>Digite o curso:</h4>
+
+        <input type="text" name="curso1" id="curso1">
+
+        <input type="button" name="botao1" id="botao1" value="Cria cookie" onClick="criaCookie('nomecurso','2');">
+
+        <input type="button" name="botao2" id="botao2" value="Lê cookie" onClick="leCookie('nomecurso');">
+        
+        <input type="button" name="botao3" id="botao3" value="Exclui cookie" onClick="excluiCookie('nomecurso');">
+    </form>
+</body>
+
+</html>

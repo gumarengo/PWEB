@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Teste DOM</title>
+
+
+</head>
+
+<body>
+	<p id="primeiro"> Boa Noite Turma 1 </p>
+
+	<input type="text" name="texto1" value="AAA" size=20>
+	<br>
+	<br>
+	ESCOLHA1: <input type="checkbox" name="check" >
+	ESCOLHA2: <input type="checkbox" name="check" >
+
+
+	<script>
+		txt = document.getElementById("primeiro").innerText;
+		document.write("<p>Texto do parágrafo primeiro: " + txt + "</p>");
+		
+		var x = document.getElementsByName("check");
+		var i;
+		for (i = 0; i < x.length; i++) {
+			if (x[i].type == "checkbox") {
+				x[i].checked = true;
+			}
+		}
+	</script>
+
+</body>
+
+</html>

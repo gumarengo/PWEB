@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convertendo variáveis</title>
+    <script>
+        var num1 = Number("Boa Noite!") //NaN 
+        var num2 = Number(""); //0 
+        var num3 = Number("000011"); //11 
+        var num4 = Number(true); //1 
+        var num5 = Number("1.125"); //1.125
+        var num6 = Number(5.78657); //5.78657
+        var num7 = Number("00.5"); //0.5
+        var num8 = Number("0b1010"); //10
+
+        alert("num1=" + num1 + " num2=" + num2 + " num3=" +
+            num3 + " num4=" + num4 + " num5=" + num5 + " num6=" + num6 +
+            " num7=" + num7 + " num8=" + num8);
+
+        var num10 = parseInt("1234 feijaonoprato"); //1234 
+        var num20 = parseInt(""); //NaN 
+        var num30 = parseInt("0xA"); //10 - hexadecimal 
+        var num40 = parseInt("546.5"); //546
+        var num50 = parseInt("70"); //70 - decimal 
+        var num60 = parseInt("0xf"); //15 - hexadecimal 
+        var num70 = parseInt("-50"); // -50
+        var num80 = parseInt("  1 6 0"); //1
+        var num90 = parseInt("546.8"); //546       
+
+        alert("num10=" + num10 + " num20=" + num20 + " num30=" +
+            num30 + " num40=" + num40 + " num50=" + num50 + " num60=" + num60 +
+            " num7=" + num7 + " num8=" + num8 + " num90=" + num90);
+
+        var num11 = parseInt("10", 2); // 2 - binário 
+        var num22 = parseInt("10", 8); // 8 - octal 
+        var num33 = parseInt("10", 10); // 10 - decimal 
+        var num44 = parseInt("10", 16); // 16 – hexadecimal
+
+        alert("num11="+num11+" num22="+num22+
+             " num33="+num33+" num44="+num44);
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convertendo variáveis</title>
+    <script>
+        function Retangulo(base, altura){
+            this.base = base;
+            this.altura = altura;
+            this.area = base*altura;
+            //alert(this.area);
+        }
+
+        base = parseInt(prompt("digite o valor da base:"));
+        altura = parseInt(prompt("digite o valor da altura:"));
+        var novoRetangulo = new Retangulo(base,altura);
+        alert("Área é igual a: " + novoRetangulo.area);
+
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funcao Validar</title>
+
+    <script>
+        function validar(obj, minimo, maximo) {
+            if ((obj.valor < minimo) || (obj.valor > maximo))
+                alert("Valor inválido!");
+        }
+    </script>
+
+</head>
+
+<body>
+    <B>Informe um número entre 18 e 99:</B>
+    <INPUT TYPE="text" NAME="idade" SIZE=3 onChange="validar(this, 18, 99);">
+    
+</body>
+
+</html>

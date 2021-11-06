@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        var meuObj = new Object(),
+            str = "minhaString",
+            aleat = Math.random(),
+            obj = new Object();
+    
+        meuObj.tipo = "Sintaxe de ponto";
+        meuObj["data de criacao"] = "String com espaco";
+        meuObj[str] = "valor de String";
+        meuObj[aleat] = "Numero Aleatorio";
+        meuObj[obj] = "Objeto";
+        meuObj[""] = "Mesmo uma string vazia";
+
+        alert("tipo=" + meuObj.tipo);
+        alert("str="+ meuObj[str]);
+		alert("aleat=" + meuObj[aleat]);
+		alert("data de criação=" + meuObj["data de criacao"]);
+			alert("obj=" + meuObj[obj]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

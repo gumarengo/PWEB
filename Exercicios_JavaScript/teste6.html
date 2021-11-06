@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+
+    <script>
+        function ordena(a, b, c) {
+            if (a >= b) {
+                if (a >= c) {
+                    if (c >= b)
+                        return (b + " " + c + " " + a);
+                    else
+                        return (c + " " + b + " " + a);
+                } else
+                    return (b + " " + a + " " + c);
+
+            }
+         else
+          {
+            if (b >= c) {
+                if (c >= a)
+                    return (a + " " + c + " " + b);
+                else
+                    return (c + " " + a + " " + b);
+
+            } else {
+                return (a + " " + b + " " + c);
+            }
+        }
+
+        }
+
+        alert(ordena(12, 3, 3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

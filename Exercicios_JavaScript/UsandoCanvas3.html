@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Canvas - Desenha bolinhas azuis</title>
+
+
+</head>
+
+<body>
+    <canvas id="tela" width="600" height="400"></canvas>
+    <script>
+        var tela = document.getElementById("tela");
+        var c = tela.getContext("2d");
+        c.fillStyle = "gray";
+        c.fillRect(0, 0, 600, 400);
+
+        //Esse tipo de função é o que chamamos de callback.
+        // no caso esta recebendo o evento que acabou de acontecer
+        tela.onclick = function (evento) {
+            var x = evento.pageX - tela.offsetLeft; // subtrai a posicao de desenho do canvas
+            var y = evento.pageY - tela.offsetTop;
+            alert("alguém clicou na lousa, posição do clique : " + x + ", " + y);
+            c.fillStyle = "blue";
+            c.beginPath();
+            c.arc(x, y, 10, 0, 2 * 3.14);
+            c.fill();
+        };
+    </script>
+</body>
+
+</html>

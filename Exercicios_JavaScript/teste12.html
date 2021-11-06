@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <title>Teste da dívida </title>
+</head>
+
+<body>
+    <script>
+        var divida= 5000;
+
+        function atualizar_divida(recebe) {
+            divida -= recebe;
+            return divida;
+        }
+
+        for (var i = 0; i < 12; i++)
+            atualizar_divida(300);
+        
+        alert(divida);
+    </script>
+</body>
+
+</html>

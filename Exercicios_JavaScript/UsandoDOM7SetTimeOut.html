@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt‐BR">
+
+<head>
+	<meta charset="UTF‐8" />
+	<title>Objetos DOM</title>
+
+	<script>
+		n = 0;
+
+		function atualizar() {
+			n++;
+			document.getElementById("contador").innerHTML = "<p>" + n + "</p>";
+			temp1 = window.setTimeout("atualizar();", 1000);
+		}
+
+	</script>
+</head>
+
+<body>
+	<br>
+	<br>
+	<span id="contador"></span>
+
+	<a href="#" onClick="window.clearTimeout(temp1);"> Parar o contador
+	</a>
+
+	<script>
+		atualizar();
+	</script>
+
+</body>
+
+</html>

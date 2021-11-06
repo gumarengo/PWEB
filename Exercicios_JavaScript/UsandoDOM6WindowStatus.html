@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt‐BR">
+
+<head>
+    <meta charset="UTF‐8" />
+    <title>Objetos DOM</title>
+    
+    <script>
+        var r = window.confirm("Pressione o botão!");
+        if (r == true) {
+            window.alert("Pressionou OK!");
+        } else {
+            window.alert("Pressionou Cancel!");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- atencao em alguns browsers este comando é ignorado -->
+
+    <input type="button" size=20 id="texto" value="passe o mouse em cima" onMouseOver="window.status='Descrição da Página 1';return true" onMouseOut="window.status='';return true">
+
+    
+</body>
+
+</html>

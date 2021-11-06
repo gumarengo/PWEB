@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array em ordem ascendente</title>
+</head>
+
+<body>
+    <script>
+        // ordem string
+        var valores = [0, 1, 5, 10, 15, 2];
+        valores.sort();
+        alert(valores); //0,1,10,15, 2, 5
+
+        // ordem numero ascedente
+        var valores1 = [0, 1, 5, 10, 15, 2];
+        valores1.sort(function(a, b) {
+            return a - b
+        }); -1 -5 -10 -15 -2
+        alert(valores1); // 0,1,2,5,10,15
+    </script>
+
+</body>
+
+</html>

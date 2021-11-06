@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste DOM</title>
+    <script>
+       
+        function validarDados() {
+            x =  document.getElementById("idMensagem");
+            y = document.forms.formulario1.elements[0];
+            z = document.forms.formulario1.elements;
+            
+            alert (x.value);
+            alert (y.value);
+            alert (z[0].value);
+            
+            /**usando a posicao no formulario
+            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 3) {
+                alert("Preencha campo NOME corretamente!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            }; **/
+            
+            return true;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form action="teste" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+        <div id="principal" width=200 heigth=200 align=center>
+            Nome Completo:
+            <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <br> E-Mail :
+            <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <br> Mensagem :
+            <textarea name="idMensagem" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+            <br>
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Submit">
+            <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+        </div>
+    </form>
+</body>
+
+</html>

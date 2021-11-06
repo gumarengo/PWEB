@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+
+    <script>
+        function teste(a, b, c) {
+            var retorno, maior, menor = [],
+                num = [a, b, c];
+            maior = num[0];
+            for (i = 1; i < 3; i++) {
+                if (num[i] > maior) {
+                    maior = num[i];
+                    menor.push[maior];
+                } else
+                    menor.push(num[i]);
+            }
+            retorno = "" + maior;
+            if (menor[0] > menor[1]) {
+                retorno += menor[0];
+                retorno += menor[1];
+            } else {
+                retorno += menor[1];
+                retorno += menor[0];
+            }
+            return retorno;
+        }
+
+        alert(teste(3, 1, 2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

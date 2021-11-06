@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+</head>
+
+
+<body>
+    <form name="formulario1">
+        <input name="idNome" type="text" id="idNome1">
+        <input type="button"  size=10 value="teste" onclick="listar();">
+    </form>
+
+
+    <script>
+        function listar()
+        {
+        alert('1 ' + document.formulario1.elements[0].value);
+        alert('2 ' + document.forms.formulario1.elements[0].value);
+       // alert('3 ' + document.getElementById("idNome"));
+        alert('4 ' + document.forms.formulario1.elements["idNome"].value);
+       //  alert('5 ' + document.getElementById("idNome").value);
+       // alert('6 ' + document.getElementByName("idNome1"));
+        alert('7 ' + window.document.getElementById("idNome1").value);
+        alert('8 ' + document.forms.formulario1.idNome.value);
+       // alert('9 '+ window.document.forms.getElementById("idNome").value);
+            alert('10 ' + document.forms.formulario1.idNome1.value);
+        }
+        
+       
+        
+        var novoArray = [1,6,10,15,40,30,16,26,25,2];
+        novoArray.reverse();
+        alert(novoArray);
+        novoArray.sort();
+        alert(novoArray);
+        
+        alert(window.location.href);
+        
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+h4 {
+    margin-left: 200px;
+}
+
+/* em relacao a tela do browser */
+.boxabsolute {
+background-color: green;
+height: 100px;
+width: 100px;
+position: absolute;
+top: 30px;
+left: 15px;
+}
+
+/* em relação ao pai */
+.boxrelative {
+background-color: blueviolet;
+height: 200px;
+width: 200px;
+position: relative;
+top: 50px;
+left: 15px;
+}
+
+
+
+.boxfixed {
+background-color: red;
+height: 50px;
+width: 50px;
+position: fixed;
+top: 30px;
+left: 15px;
+}
+
+
+.boxstatic {
+background-color: pink;
+height: 50px;
+width: 50px;
+position: static;
+top: 30px;
+left: 15px;
+}
+
+.pai{
+    width:200px;
+    height:200px;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .pai img {
+    position:absolute;
+    top:0;
+    left:0;
+    transition: top 1s;
+  }
+  
+  .pai:hover img{
+    top: 100px;
+    transition: top 2s;
+  }
+  
+  .back{
+    display:flex;
+    background-color:#000;
+    flex:1;
+    color: #fff;
+    padding: 5px;
+    align-content:top;
+  }
+  
+  .back p {
+    margin-top: 0;
+  }
+

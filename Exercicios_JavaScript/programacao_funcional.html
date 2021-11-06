@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+       // A função retorna sempre o mesmo resultado para um dado input
+    //Essa função é impuraporque ela usa um objeto global que não é passado como parâmetro na função.
+        
+        let PI1 = 3.14;
+
+        const calculateArea1 = (radius) => radius * radius * PI1;
+
+        alert("primeira="+calculateArea1(10));
+
+        // funcao pura
+
+        const PI2 = () => 3.14;
+
+        const calculateArea2 = (radius) => radius * radius * PI2();
+
+        alert("segunda="+calculateArea2(10)); 
+    </script>
+
+
+</body>
+
+</html>

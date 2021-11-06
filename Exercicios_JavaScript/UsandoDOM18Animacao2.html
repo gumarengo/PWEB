@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+
+	<style>
+        /* quadro chave - ponto de inicio e fim de transicao imagem */
+        
+		@keyframes carteiro {
+			from {
+				background-position: 0px;
+			}
+			to {
+				background-position: -660px;
+			}
+		}
+		
+		.recorte {
+			width: 240px;
+			height: 220px;
+			background-image: url("carteiro.jpg");
+			animation: carteiro .8s steps(8, end) infinite;  /**nome frame  duração  nº passos desejados direção para iniciar infinite para nao parar **/
+		}
+	</style>
+
+	<script>
+		function startAnimation() {
+			document.getElementById("recorte").style.animationPlayState = "running";
+		}
+
+		function stopAnimation() {
+			document.getElementById("recorte").style.animationPlayState = "paused";
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="recorte" class="recorte"></div>
+	<button id="Pausar" name="Pausar" onclick="stopAnimation()">Pausar</button>
+	<button id="Animar" name="Animar" onclick="startAnimation()">Animar</button>
+</body>
+
+</html>

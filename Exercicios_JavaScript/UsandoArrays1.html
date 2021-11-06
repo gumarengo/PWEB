@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Teste com Arrays</title>
+</head>
+
+<body>
+	<script>
+		//declarando  com os dados - 3 strings
+		var nomes = ["Clarice Lispector", "Carlos Drumond", "José de Alencar"];
+
+		//omitindo o operador New
+		var idades = Array(3);
+		idades[0] = 10;
+		idades[1] = 20;
+		idades[2] = 30;
+		idades[3] = 40;
+
+
+		//omitindo o operador com dados, notacao literal
+		var cidades = Array("Sorocaba");
+
+		//tipos de dados diferentes
+		var misturados = [34, "doce", "azul", 11];
+
+		// array vazio
+		var nada = [];
+
+
+		alert("nomes: " + nomes + " comprimento:" + nomes.length);
+		alert("idades:" + idades + " comprimento:" + idades.length);
+		alert("cidades:" + cidades);
+		alert("misturados:" + misturados + " comprimento:" + misturados.length);
+		alert("nada:" + nada + " comprimento:" + nada.length);
+
+
+		var cores2 = ["vermelho", "azul", "verde"];
+		cores2.length = 3;
+		//incluiu
+		alert(cores2[0] + " " + cores2[1] + " " + cores2[2] + " " + cores2[3]); //undefined
+
+		var cores1 = ["vermelho", "azul", "verde"];
+		cores1.length = 2;
+		//excluiu
+		alert(cores1[2]); //undefined
+	</script>
+</body>
+
+</html>

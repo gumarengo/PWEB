@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt‐BR">
+
+<head>
+    <meta charset="UTF‐8" />
+    <title>Objetos DOM</title>
+
+    <script>
+        // atenção se tiver com bloqueador pop-ups 
+
+        function abreJanela() {
+            // nome janela, url, propriedade name, medidas
+            novaJanela = window.open("pagina1.html", "janela1", "width = 400, height = 400");
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <p id="teste"></p>
+    <script>
+        abreJanela();
+        document.getElementById("teste").innerHTML = "nome:" + window.navigator.appName + "  versão:" + window.navigator.appVersion;
+        // por razoes de compatibilidade
+        // o nome do navegador no
+        // IE11, Firefox, Chrome and Safari 
+        // retorna "Netscape" - por causa do Mozilla
+    </script>
+
+    <input type="button" value="Fecha Nova Janela" onclick="novaJanela.close();">
+
+    <input type="button" value="Imprime esta página" onclick="!print();">
+</body>
+
+</html>

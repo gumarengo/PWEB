@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt‐BR">
+
+<head>
+    <!--Através de frames de navegação é possível  controlar o documento em //outro frame.
+	deve executar esse que chama a pagina esquerda que carrega as
+	demais, pode ser que de bug - problemas de popups -->
+
+    <meta charset="UTF‐8" />
+    <title>WINDOW FRAMES</title>
+    <frameset cols=" * , *, * ">
+        <frame name="esquerdo" src="paginaesq.html"> <!--nessa tem o carregar-->
+            <frame name="meio" src="about:blank">
+                <frame name="direito" src="about:blank">
+    </frameset>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste This</title>
+</head>
+
+<body>
+    <h1>Operação</h1>
+    <form id="formulario1">
+        <label>Escolha um número</label>
+        <input type="number" id="numero">
+        <br>
+        <label>resultado</label>
+        <input type="text" id="resultado" disabled>
+        <br>
+        <input type="button" value="Executa função" onclick="funcao3();">
+    </form>
+
+    <script>
+        funcao1 = function(n) {
+            return (n * 3);
+        }
+        funcao2 = function(n) {
+            return funcao1(n * 2);
+
+        }
+        funcao3 = function() {
+            document.forms.formulario1.elements[1].value = 
+                funcao2( document.forms.formulario1.elements[0].value);
+        }
+    </script>
+</body>
+
+</html>

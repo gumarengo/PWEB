@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Web Storage</title>
+</head>
+
+<body>
+    <script>
+        localStorage.setItem("aluno", "Mauricio");
+        sessionStorage.setItem("aluno", "Ana");
+
+        //No exemplo abaixo, mostramos outra forma de armazenar dados noWeb Storage.
+        localStorage.usuario = "Kleber";
+        sessionStorage.usuario = "Jaqueline";
+
+        //recuperando os dados
+
+        usuario1 = localStorage.getItem("aluno");
+        usuario2 = sessionStorage.getItem("aluno");
+        usuario3 = localStorage.usuario;
+        usuario4 = sessionStorage.usuario;
+
+        alert(usuario1 + " " + usuario2 + " " + usuario3 + " " + usuario4);
+
+        // limpando
+        localStorage.removeItem("aluno");
+        sessionStorage.removeItem("aluno");
+        localStorage.clear();
+        sessionStorage.clear();
+    </script>
+
+</body>
+
+</html>

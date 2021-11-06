@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Testando Storage</title>
+</head>
+
+<body>
+        <script>
+        // Verifica se o navegador suporta local storage
+        if (typeof (Storage) !== "undefined") {
+
+            // Armazena um valor na variavel nome
+            localStorage.setItem("nome","Ana Maria");
+           // localStorage.nome = "Ana Maria";
+
+
+           localStorage.setItem("numRa","0030481923029");
+           alert(localStorage.getItem("numRa"));  
+
+
+           // Le o valor da variavel nome
+            //alert(localStorage.nome);
+            alert(localStorage.getItem("nome" + "<br/>" + "numRa"));  
+        } 
+     else {
+            alert("Seu navegador nao suporta armazenamento local!");
+        }
+    </script>
+</body>
+
+</html>

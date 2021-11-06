@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usando Prototype</title>
+</head>
+
+<body>
+    <script>
+      var Pessoa = function(nome, email) {
+     this.nome =  nome;
+ 
+     // verifica se o e-mail foi preenchido
+     if (email) {
+          this.email = email;    
+     }
+}
+ 
+//não posso fazer isso antes da instanciar o Pedro
+//Pessoa.email="contato@fatec.sp.gov.br.br"; // vai voltar undefined
+// pois se trata de instância
+//mas posso fazer isso, significa utilize o prototipo Pessoa e atribua o email
+
+Pessoa.prototype.email = "contato@fatec.sp.gov.br.br";
+ 
+var  pedro= new Pessoa("Pedro Marcos"); //não foi colocado o e-mail aqui mas já tinha
+alert(pedro.email); // imprime contato@fatec.sp.gov.br
+ 
+var joao = new Pessoa("Joao da Silva", "joao@da.silva"); // aqui passa e-mail  forma comum
+alert(joao.email); // joao@da.silva
+
+    </script>
+
+</body>
+
+</html>

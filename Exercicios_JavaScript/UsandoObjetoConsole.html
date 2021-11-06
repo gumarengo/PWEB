@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+
+    function benchmark(n) {
+    var maxPI = 0;
+    console.time("tempo gasto");
+    for (var i = 0; i < n; i++) {
+        maxPI += Math.PI * i;
+    }
+    console.log("Max PI: ", maxPI);
+    console.timeEnd("tempo gasto");
+  }
+        
+        //usedJSHeapSize: 10000000, //totalJSHeapSize: 12700000  
+        
+    //console.memory???
+        
+        </script>
+
+        <body>
+
+        </body>
+
+</html>

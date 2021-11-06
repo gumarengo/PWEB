@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Testando void</title>
+
+</head>
+
+<body>
+	<a href="#">Clique Aqui, primeira opção inútil</a>
+	<br>
+	<br>
+
+	<a href="javascript:void(0)"> Clique aqui, segunda opção inútil </a>
+	<br>
+	<br>
+
+	<a href="javascript:void(document.body.style.backgroundColor='blue');">
+            Clique aqui fundo azul </a>
+
+	<script>
+		/* OUTRA UTILIZAÇÃO: O operador void avalia uma expressão dada, e retorna undefined. */
+
+
+		function teste1() {
+			return 1; /* RETORNA 1*/
+		}
+
+		alert(teste1());
+
+		function teste2() {
+			return void 1;
+		}
+
+		alert(teste2()); /* RETORNA UNDEFINED */
+	</script>
+
+</body>
+
+</html>

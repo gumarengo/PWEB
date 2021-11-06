@@ -1,0 +1,44 @@
+<HTML>
+
+<HEAD>
+    <TITLE> Usando JavaScript </TITLE>
+    <SCRIPT type="text/javascript">
+   //     var win = window.open("css1.html")
+    </SCRIPT>
+</HEAD>
+
+<BODY onload="win">
+    <p>Como você viu, a janela é aberta automaticamente quando esta página é carregada.</p>
+    
+    <script>
+       // forma1
+    	function Aluno(xNome, xRa) {
+			this.nome = xNome;
+			this.ra = xRa;
+		}
+        var ObjAluno1 = new Aluno("João", 123);
+		        
+        // forma2
+        var ObjAluno2 = new Object();
+        ObjAluno2.nome="João";
+        ObjAluno2.ra=123;
+        
+        // forma3
+        var ObjAluno3 = {}; 
+        ObjAluno3.nome="João";
+        ObjAluno3.ra=123;
+    
+        // forma4
+        var objAluno4 = { 
+          name : "João",
+          ra: 123};
+        
+        // forma5
+        var ObjAluno5 = {}; 
+        ObjAluno5['nome']="João";
+        ObjAluno3.ra=123;
+
+    </script>
+</BODY>
+
+</HTML>

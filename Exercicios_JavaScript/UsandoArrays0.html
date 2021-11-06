@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste com Arrays</title>
+</head>
+
+<body>
+    <script>
+        var notasMusicais = new Array();  //OU 
+        var meuArray = [];
+        
+        alert("tamanho notas="+notasMusicais.length);
+        alert("tamanho meu array="+meuArray.length);
+        
+        var notasMusicais1 = new Array(6);  
+        var notasMusicais2 = [6];
+        
+        alert("tamanho notas1="+notasMusicais1.length);
+        alert("tamanho notas2="+notasMusicais2.length);
+        alert("primeiro dado notas1="+notasMusicais1[0]);
+        alert("primeiro dado notas2="+notasMusicais2[0]);
+        
+        var a = new Array(8);              
+        var b = new Array(8, 9);
+        var c = [8];
+        
+         alert("tamanho a="+a.length);
+        alert("tamanho b="+b.length);
+        alert("tamanho c="+c.length);
+        alert("primeiro dado a="+a[0]);      
+        alert("primeiro dado b="+b[0]);
+        alert("primeiro dado c="+c[0]);
+           
+        var idades = Array(4);
+        idades[0]= 1;
+        idades[1]= 2;
+        alert("tamanho idades="+idades.length);
+        alert("primeiro dado idades="+idades[0]);      
+
+        var cidades = Array("Sorocaba")        ;
+        alert("tamanho cidades="+cidades.length);
+        alert("primeiro dado cidades="+cidades[0]);      
+ 
+        var misturados = [34, "doce", "azul", 11];
+        alert("tamanho misturados="+misturados.length);
+        alert("primeiro dado misturados="+misturados[0]);      
+
+        
+        
+        var cores2 = ["vermelho", "azul", "verde"];
+        cores2.length = 3;
+        //incluiu
+        alert(cores2[0] + " " + cores2[1] + " " + cores2[2] + " " + cores2[3]); //undefined
+
+        var cores1 = ["vermelho", "azul", "verde"];
+        cores1.length = 2;
+        //excluiu
+        alert(cores1[2]); //undefined
+
+
+        function incrementaFinal(_array) {
+            var newArray = [];
+            newArray = _array.slice(0);
+           // extrai do início até o fim de array
+            var lastNumber = newArray.pop();
+            newArray.push(lastNumber + 1);
+            return newArray;
+        }
+        
+      var x= Array(6,4,3,2,1)
+      
+      alert(incrementaFinal(x));
+        
+    </script>
+</body>
+
+</html>

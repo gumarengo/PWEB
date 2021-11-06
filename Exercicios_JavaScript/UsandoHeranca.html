@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos - Herança </title>
+</head>
+
+<body>
+	<script>
+		function Conta() {
+			var nome;
+			this.getNome = function () {
+				return nome;
+			};
+			this.setNome = function (value) {
+				nome = value;
+			};
+
+			var banco;
+			this.getBanco = function () {
+				return banco;
+			};
+			this.setBanco = function (value) {
+				banco = value;
+			};
+		
+			var numeroConta;
+			this.getConta = function () {
+				return numeroConta;
+			};
+			this.setConta = function (value) {
+				numeroConta = value;
+			};
+
+			var saldo;
+			this.getSaldo = function () {
+				return saldo;
+			};
+			this.setSaldo = function (value) {
+				saldo = value;
+			};
+		}
+
+		function Corrente() {
+			var saldoEspecial;
+			this.getEspecial = function () {
+				return saldoEspecial;
+			};
+			this.setEspecial = function (value) {
+				saldoEspecial = value;
+		};
+
+		function Poupanca() {
+			var juros;
+			this.getJuros = function () {
+				return juros;
+			};
+			this.setJuros = function (value) {
+				juros = value;
+		};
+
+		Corrente.prototype = new Conta();
+		Poupanca.prototype = new Conta();
+
+
+		nPessoaFisica = new PessoaFisica();
+		nPessoaJuridica = new PessoaJuridica();
+		nPessoaFisica.setCPF('111111');
+		nPessoaFisica.setNome('Pedro Vieira');
+		nPessoaJuridica.setCNPJ('222222');
+		nPessoaJuridica.setNome('Solares do Brasil ');
+		alert(nPessoaFisica.getNome() + '\n' + nPessoaFisica.getCPF() + '\n' + nPessoaJuridica.getNome() + '\n' + nPessoaJuridica.getCNPJ());
+	</script>
+</body>
+
+</html>

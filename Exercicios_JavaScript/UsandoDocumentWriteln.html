@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <TABLE WIDTH="90" BORDER="2" CELLSPACING="2" CELLPADDING="0">
+        <SCRIPT>
+            var val, tag, cor;
+            for (val = 1; val <= 10; val++) {
+                if (val % 2 == 0) {
+                    cor = "<FONT color='blue'>";
+                    tag = "B";
+                } else {
+                    cor = "<FONT color='red'>";
+                    tag = "I";
+                }
+                document.writeln("<TR><TD WIDTH='100%'><" + tag + ">" + cor +
+                    val + "*2 = " + val * 2 + "</FONT></" + tag + "></TD></TR>");
+            }
+        </SCRIPT>
+    </TABLE>
+
+</body>
+
+</html>

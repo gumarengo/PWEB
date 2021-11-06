@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste DOM</title>
+</head>
+
+<body>
+    <p id="teste"></p>
+
+    <script>
+        function myFunction() {
+
+            var x = 10;
+
+            var y = 20;
+
+            var a = eval("x * y");
+
+            var b = eval("x + y");
+
+            var c = eval("x / y");
+
+            var d = eval("y - 17") + " ";
+
+
+            var res = a + b + c + d;
+
+            document.getElementById("teste").innerHTML = res;
+
+            //   200 30 0.5  3
+            
+        }
+
+        myFunction();
+    </script>
+</body>
+
+</html>

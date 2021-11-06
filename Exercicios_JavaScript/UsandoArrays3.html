@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste com Arrays</title>
+</head>
+
+<body>
+    <script>
+        var text = "xxxxxxxxxxxxxxxxxxxxxx João yyyyyyyyy João\ zzzzzzz\João";
+        var myName = "João";
+        var hits = [];
+        for (i = 0; i <= text.length; i++) {
+            if (text[i] === "J") {
+                for (j = i; j < i + myName.length; j++) {
+                    hits.push(text[j]); // insere no final do array
+                }
+            }
+        }
+
+        if (hits.length === 0) {
+            alert("João não foi encontrado!");
+        } else {
+            alert(hits);
+        }
+    </script>
+</body>
+
+</html>

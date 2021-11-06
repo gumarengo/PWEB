@@ -1,0 +1,35 @@
+<html>
+<script>
+	function mostra_relogio() {
+		var hoje = new Date(); //data atual
+		var horas = hoje.getHours();
+		var minutos = hoje.getMinutes();
+		var segundos = hoje.getSeconds();
+		
+		// colocando um zero à esquerda
+		
+		var val_horas = ((horas < 10) ? "0" : "") + horas;
+		val_horas += ((minutos < 10) ? ":0" : ":") + minutos;
+		val_horas += ((segundos < 10) ? ":0" : ":") + segundos;
+		
+		document.relogio.mostrador.value = val_horas;
+		
+		window.setTimeout("mostra_relogio();", 100);
+	}
+</script>
+
+<head>
+	<title>Java Script - Relógio</title>
+</head>
+
+<body onLoad="mostra_relogio();" bgcolor="FFFFCC">
+	<center>
+		<h3> Relógio</h3>
+		<br>
+		<form name="relogio">
+			<input type="text" name="mostrador" size="8">
+		</form>
+	</center>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Função Callback</title>
+
+    <script>
+        function invoke_and_add(a, b) {
+            return a() + b();
+        }
+
+        function one() {
+            return 1;
+        }
+
+        function two() {
+            return 2;
+        }
+
+        var x = invoke_and_add(one, two);
+
+        alert(x);
+
+        var y = invoke_and_add(function() {
+            return 1;
+        }, function() {
+            return 2;
+        });
+
+        alert(y);
+        
+        //Função base
+        function getUsuario(idUsuario, callback) {
+            callback("Jayr Alencar"); //Passamos a função callback por parâmetro e executamos ela dentro da outra função
+        } 
+        //Usando
+        getUsuario(1, function(resultado) {
+            alert(resultado);
+        });
+        
+        function soma(x,callback) {
+            callback(x+10); 
+        }
+        
+        soma(20,function(resultado) {                   
+        alert("resultado="+resultado);});
+        
+        var s = soma(20,function(){return 10;});
+        alert("s="+s);
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>

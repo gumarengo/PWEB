@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+  
+
+  .container {
+    margin: 30px auto;
+    width: 700px;
+    min-height: 470px;
+    background: #2196f3;
+    border-radius: 4px;
+    position:relative;
+   /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 50px;
+    text-shadow: 3px 1px 6px rgb(126, 0, 0);
+  }
+  
+  h3 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  .links {
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  .links h3 {
+    padding-bottom: 10px;
+  }
+  
+  #reset,  button {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 15px;
+    background: white;
+    border-radius: 5px;
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  #reset:active,
+  button:active {
+    top: 4px;
+    font-weight: 500;
+    font-weight: bold;
+    background-color: green;
+    color: #fff;
+  }
+  
+  .computer {
+    width: 200px;
+    margin-left: calc(50% - 120px);
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .computer label {
+    display: block;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    padding-bottom: 8px;
+  }
+  
+  .computer input {
+    border: 1px solid black;
+    padding: 20px 7px;
+    border-radius: 4px;
+    width: 250px;
+    font-weight: 500;
+    font-weight: bold;
+  }
+  
+  #reset {
+    margin-top: 50px;
+    width: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .lose {
+    position: relative;
+    top: -45px;
+  }
+  
+  #win,
+  #lose,
+  #draw {
+    width: 240px;
+    font-size: 27px;
+    text-align: center;
+    margin: auto;
+    display: none;
+  }
+  
+  span {
+    font-size: 21px;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+  }
+  
+  .count {
+    margin-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .count label {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+  }
+  
+  .count input[type="text"] {
+    margin-right: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px 5px;
+    margin-left: 10px;
+    width: 50px;
+  }
+  
+  #choose {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .escolha {
+    text-align: center;
+    position: relative;
+    z-index: 50;
+    background: white;
+    margin: auto;
+    margin-top: 30%;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 0;
+  }
+ 

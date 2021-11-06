@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<title>Teste com Link</title>
+</head>
+
+<script>
+	function mostraDados() {
+		alert("imagem 0: " + window.document.images[0].name +
+			" borda: " + window.document.images[0].border + " pré-imagem: " + window.document.images[0].lowsrc);
+	}
+</script>
+
+<body>
+
+	<body>
+		<img src="vistajanela.jpg" name="imagem1" ” border="1" height="500" width="500" hspace="480" vspace="200" lowsrc="vistaabrindo.gif" onload="mostraDados();"> 
+		
+		/* mostra os dados após carregar a imagem
+		 onLoad - Quando termina o carregamento das imagens na página. onAbort - Quando o usuário interrompe o carregamento da página antes de carregar as imagens. onError - Quando a imagem está corrompida ou não pode ser localizada (pathname incorreto). */
+
+	</body>/
+</body>
+
+</html>

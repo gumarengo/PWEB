@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste DOM</title>
+    <script>
+        // adiciona item no nó
+        function adicionaItem(nome) {
+            document.getElementById('Lista').innerHTML += "<li>" + nome + "</li>";
+        };
+
+
+
+        // mostra os dados do nó
+        function mostraNo(item) {
+
+            alert("Valor innerHTML do principal(Lista)" + document.getElementById(item).innerHTML);
+
+            alert("Nome do Nó " + document.getElementById(item).nodeName);
+
+            // se fosse button por exemplo o value seria o texto
+            // no caso lista nao tem value
+            alert("value do Nó " + document.getElementById(item).nodeValue);
+
+            //pai
+            alert("Parent " + document.getElementById(item).parentNode.nodeName);
+
+            // o primeiro filho de elemento Lista é tipo texto
+            alert("Primeiro Filho " + document.getElementById(item).firstChild.innerHTML + "  type " + document.getElementById(item).firstChild.nodeType);
+            document.getElementById(item).firstChild.nodeValue;
+
+            alert("Ultimo Filho  " + document.getElementById(item).lastChild.innerHTML + "  type " + document.getElementById(item).lastChild.nodeType);
+
+
+            alert("Filho posicao 0  " + document.getElementById(item).childNodes[0].innerHTML + " type " + document.getElementById(item).childNodes[0].nodeType);
+
+            alert("Filho posicao 1  " + document.getElementById(item).childNodes[1].innerHTML);
+
+
+            alert("Próximo sibling " + document.getElementById(item).nextSibling.nodeName);
+        };
+    </script>
+
+</head>
+
+<body id="principal">
+
+    <ul id="Lista">
+        <li>Item1</li>
+    </ul>
+
+
+    <ul id="Lista2">
+        <li>Item1 da Lista2</li>
+        <li>Item2 da Lista2</li>
+        <li>Item3 da Lista2</li>
+    </ul>
+
+    <script>
+        adicionaItem("Item2");
+        adicionaItem("Item3");
+        mostraNo("Lista")
+    </script>
+
+</body>
+
+</html>

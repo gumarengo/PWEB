@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando this</title>
+
+</head>
+
+<body>
+    <script>
+        function myFunc() {
+            alert(this);
+        }
+
+        var myFunc2 = function () {
+            alert(this);
+        }
+
+        myFunc();
+        myFunc2();
+    </script>
+
+</body>
+
+</html>

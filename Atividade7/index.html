@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pedra, Papel e Tesoura</title>
+    
+</head>
+<body>
+    
+
+    <div class="container">
+  
+    <h1>JO - KEN - PO</h1>
+  
+    <div class="links">
+       <h3>Prepare-se:</h3>
+      <button id="pedra">Pedra!</button>
+      <button id="papel">Papel!</button>
+      <button id="tesoura">Tesoura!</button>
+      
+    </div>
+    
+    <div class="computer">
+        <form id="pchoose">
+        <p>
+          <label for="pc">Computador:</label>
+          <input type="text" name="pc" readonly>
+        </p>
+      </form>
+    </div>
+   
+  <div class="count">
+      <form id="contar">
+       <label for="vic">Vitorias:</label>
+       <input type="text" name="vic" readonly>
+        <label for="lose">Derrotas:</label>
+       <input type="text" name="lose" readonly>
+        <label for="empate">Empates:</label>
+        <input type="text" name="empate" readonly>
+        
+        <input type="reset" value="Resetar" id="reset">
+       </form>
+  </div>
+    
+  <div id="choose">
+      <div class="escolha">
+        <div id="win">
+          <h2 class="h2">Você Ganhou!</h2>
+          <span>Parabéns!</span>
+        </div>  
+    
+        <div id="lose">
+          <h2 class="h2">Você Perdeu!<h2>
+          <span>Mais sorte na próxima!</span>
+        </div>
+        <div id="draw">
+          <h2 class="h2">Empate!</h2>
+          <span> Foi quase, tente novamente</span>
+      </div> 
+    </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>

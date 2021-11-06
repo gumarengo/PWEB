@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <script>
+        /*
+       var a1 = new String("teste");
+        var a2 = "teste";
+        var a3 = "teste";
+        var a4 = new String("teste");
+        
+        if ((a1==a2) && (a2===a3) && (a3===a4))
+          alert("passo 1");
+        else if ((a2==a3) && (a1==a4))
+            alert("passo 2");
+        else
+            alert("passo 3");
+       
+    
+      
+        var texto = "Fatec";
+        var x = {a:"Fatec"};
+        var y = x;
+        var texto2 = new String("Fatec");
+        var z = null;
+        var w  = "";
+        var k = false;
+        
+        
+        if ((texto === texto2) || (x!==y) || (x==texto2))
+          alert("primeira condição");
+        else if ((z==w) || (w==k) || (z==k))
+          alert("segunda condição");
+        else
+          alert("terceira condição");
+
+  */
+        var Teste = function(arg1,arg2, arg3, arg4)
+
+        {
+              if (arguments[0])
+                this.argumento1 = arguments[0];
+
+            if (arguments[2])
+                this.argumento2 = arguments[1];
+            
+            this.argumento3 = arg3;
+            
+            this.argumento4 = arg4;
+            
+            this.mostra = function() {
+                alert(" o resultado é : " + this.argumento1 + " " + this.argumento2 + " " + this.argumento4)
+            }
+        }
+        var objTeste = new Teste(1, "José da Silva", "rua A", "Desenvolvedor");
+        var mostrar = objTeste.mostra();
+    </script>
+</head>
+
+<body>
+    <!--
+    <form>
+        <input type="text" name="txt" value="" />
+        <input type="button" id="btn" value="Testar FazAlgo" onclick="fazAlgo();" />
+    </form>
+    -->
+</body>
+
+</html>

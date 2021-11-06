@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste This</title>
+</head>
+
+<body>
+    <script>
+        var languages = {
+            english: "Hello!",
+            french: "Bonjour!",
+            notALanguage: 4,
+            spanish: "Hola!"
+        };
+
+        for (var myVariable in languages) {
+            if (typeof languages[myVariable] == "string")
+                console.log(languages[myVariable]);
+        }
+        
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return b-a});
+        alert(points); // 100,40,25,10,5,1
+        
+         </script>
+</body>
+
+</html>

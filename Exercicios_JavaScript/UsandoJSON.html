@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando JSON</title>
+
+    <script>
+        var txt = '{"funcionarios":[' +
+            '{"nome":"Pedro","sobrenome":"Antunes" },' +
+            '{"nome":"José","sobrenome":"Egea" },' +
+            '{"nome":"Maria","sobrenome":"Santos" }]}';
+
+      //  Para pegar os dados usar eval ou parse
+
+         var obj = eval("(" + txt + ")");
+
+          var obj2 = JSON.parse(txt);        
+        
+        // mostrando a posicao 1
+        alert(obj.funcionarios[0].nome);
+        alert(obj.funcionarios[0].sobrenome);
+
+        alert(obj2.funcionarios[1].nome);
+        alert(obj2.funcionarios[1].sobrenome);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

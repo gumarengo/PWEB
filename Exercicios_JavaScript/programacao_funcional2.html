@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+       // carregamento do arquivo: função impura, pois está lidando com algo externo, que pode sofrer alterações.
+    //contagem de texto: essa função é pura, dado que apenas recebe uma string e conta a quantidade de caracteres.
+        
+        const charactersCounter = (text) => 
+        'Character count: ${text.length}';
+
+        function analyzeFile(filename) {
+            // nao funcionou
+            let fileContent = open(filename);
+            alert(fileContent);
+            return charactersCounter(fileContent);
+        }
+            
+            alert(analyzeFile("arquivo.txt"));
+        
+    </script>
+
+
+</body>
+
+</html>

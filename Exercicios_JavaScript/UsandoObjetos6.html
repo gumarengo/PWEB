@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos</title>
+</head>
+
+ <script>
+        var languages = {
+            english: "Hello!",
+            french: "Bonjour!",
+            notALanguage: 4,
+            spanish: "Hola!"
+        };
+
+     // vai imprimir no console ( f12 / console )
+        for (var myVariable in languages) {
+            console.log (myVariable); // imprime cada linguagem
+            
+            if (typeof languages[myVariable] == "string")
+                console.log(languages[myVariable]); // imprime o valor de cada linguagem
+        }
+    </script>
+<body>
+   
+
+
+
+</body>
+
+</html>

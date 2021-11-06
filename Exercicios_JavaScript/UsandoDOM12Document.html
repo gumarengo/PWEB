@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<title>Teste com Document</title>
+</head>
+
+<body>
+	<script>
+		novaJanela = window.open("", "novaJanela", "width=400,height=400");
+
+		
+		// se comentar as linhas open e close
+		// e clicar varias vezes verá a diferenca
+		// entre usar document.open e nao usar
+		// se nao usar ele acumula
+		
+		
+        // nao aparece nada, experimenta tirar os comentários
+		function aparece() {
+			//novaJanela.document.open();
+			novaJanela.document.write("O que aparece na nova janela <br>");
+			//novaJanela.document.close();
+			novaJanela.focus();
+		}
+	</script>
+	
+
+	<body>
+	
+	
+	<script>
+		alert("URL:" + window.document.URL);
+		alert("TITLE:" + window.document.title);
+		alert("PAGINA ANTERIOR:" + window.document.referrer);
+		alert("ULTIMA MODIFICACAO:" + window.document.lastModified);
+	</script>
+	
+		<input type="button" value="Apareça na Janela" onclick="aparece();">
+	</body>
+
+
+
+
+
+</html>

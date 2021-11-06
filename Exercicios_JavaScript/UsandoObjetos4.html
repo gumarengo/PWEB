@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		function Aluno() {
+			var nome; // fica encapsulado
+			var ra;
+
+
+			this.setNome = function (vNome) {
+				this.nome = vNome;
+			}
+
+			this.setRa = function (vRa) {
+				this.ra = vRa;
+			}
+
+			this.getNome = function () {
+				return this.nome;
+			} 
+
+			this.getRa = function () {
+				return this.ra;
+			}
+
+			this.mostraDados = function () {
+				alert("Nome do aluno: " + this.nome + "\nRa: " + this.ra);
+			}
+		}
+
+		var objAluno = new Aluno();
+
+		objAluno.setNome("Joaquim");
+		objAluno.setRa("1234");
+		objAluno.mostraDados();
+	</script>
+
+
+</body>
+
+</html>

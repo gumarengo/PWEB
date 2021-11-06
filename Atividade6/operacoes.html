@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações</title>
+
+    <script>
+        const primeiroNum = prompt("Digite o primeiro valor: ");
+        const segundoNum = prompt("Digite o segundo valor: ");
+
+        const soma = parseFloat(primeiroNum) + parseFloat(segundoNum);
+        const subtracao = primeiroNum - segundoNum;
+        const produto = primeiroNum * segundoNum;
+        const divisao = primeiroNum / segundoNum;
+        const resto = primeiroNum % segundoNum;
+
+        alert(
+            `Numero 1: ${primeiroNum} | Numero 2: ${segundoNum}` +
+            `\nSoma: ${soma}` +
+            `\nSubtracao: ${subtracao}` +
+            `\nProduto: ${produto}` +
+            `\nDivisao: ${divisao}` +
+            `\nResto: ${resto}`
+        );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

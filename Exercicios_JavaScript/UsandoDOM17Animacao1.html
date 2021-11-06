@@ -1,0 +1,44 @@
+<html>
+
+<head>
+	<title>Teste Images - Animação Pernalonga</title>
+
+	<script>
+        // carrega varias imagens iniciadas por perna
+		function carrega() {
+			img = new Image();
+			for (i = 0; i < 4; i++) {
+				img[i] = "perna" + (i + 1) + ".gif";
+			}
+		}
+
+		carrega();
+
+		i = 0;
+
+        // exibe imagens carregadas
+		function exibe() {
+			if (i > 3)
+				i = 0;
+			document.images[0].src = img[i];
+			i++;
+            
+            // chamar novamente depois do timeout
+			timer = window.setTimeout("exibe();", 1000);
+		}
+        
+        function para(){
+            window.clearTimeout(timer);
+        }
+	</script>
+
+
+</head>
+
+<body bgcolor="brown">
+	<img src="perna1.gif" border="0" width="300" height="300">
+	<br>
+	<input type="button" value="Iniciar" size=20 onclick="exibe();">
+	<input type="button" value="Parar"  size=30  onclick="para();">
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <script>
+        function tocar(som) { // som recebe o índice 0 (zero) que será utilizado no Array.
+            document.embeds[som].play();
+        }
+    </script>
+</head>
+
+<body onKeyDown="tocar(0);">
+    <embed src="musica.mp3" hidden="true" autostart="false">
+</body>
+
+</html>

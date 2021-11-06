@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Init () {
+            if (document.hasFocus)
+                setInterval ("TesteFocus();", 200);
+            else
+                alert ("Seu navegador não suporta esse método!");
+        }
+
+        function TesteFocus () {
+            var info = document.getElementById ("info");
+            if (document.hasFocus ()) {
+                info.innerHTML = "O documento tem o foco";
+            }
+            else {
+                info.innerHTML = "O Documento perdeu o foco.";
+            }
+        }
+
+        function AbraOutraJanela() {
+            window.open ("TesteFoco.html", "testWindow", "width=250, height=150, left=10, top=10");
+        }
+    </script>
+</head>
+<body onload="Init ();">
+    <div id="info"></div>
+
+    <br /><br />
+      Abre uma janela de teste para causar a perda de foco da atual <br />
+    <button onclick="AbraOutraJanela();">Abre janela de teste</button>
+</body>
+</html>

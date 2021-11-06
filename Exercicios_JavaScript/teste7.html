@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+
+    <script>
+        function ordena(x, y, z) {
+            var retorno = "";
+            var maior = x;
+            var menor
+            if (y > x && y > z) {
+                if (x >= z) {
+                    menor = x;
+                } else {
+                    menor = z;
+                }
+                maior = y;
+            }
+            if (z > x && z > y) {
+                if (x < y) {
+                    menor = x;
+                } else {
+                    menor = y;
+                }
+                maior = z;
+            }
+
+            if (y < z) {
+                menor = y;
+            } else {
+                menor = x;
+            }
+        
+      //      alert ("menor="+menor);
+        //    alert("maior="+maior);
+        var medio = x + y + z - maior - menor;
+        retorno = retorno + " " + menor + " " +medio+ " " + maior;
+        return (retorno);
+
+        }
+
+        alert(ordena(2, 1, 2));
+        
+        var Aluno1 = {ra:123,nome:"ze"};
+        alert(Aluno1.ra);
+        var Aluno2 = {ra,nome};
+        Aluno2.ra=124;
+        Aluno2.nome="joao";
+        
+        var Aluno3 {ra:"001",nome:"ze"};
+        alert(Aluno3.ra);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

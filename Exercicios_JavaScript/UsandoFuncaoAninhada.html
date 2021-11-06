@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funcao Aninhada</title>
+
+    <script>
+        function adicionadobro(a, b) {
+            function dobro(x) {
+                return x * 2;
+            }
+            return dobro(a) + dobro(b);
+        }
+
+
+        a = adicionadobro(2, 3); // retorna 10 
+        alert(a);
+        b = adicionadobro(3, 4); // retorna 15 
+        alert(b);
+        c = adicionadobro(4, 5); // retorna 18 
+        alert(c);
+    </script>
+
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos - Herança 2 </title>
+</head>
+
+<body>
+	<script>
+		var Pessoa = function() { //diferença do exercicio 
+			// anterior está aqui
+			var nome;
+			this.getNome = function () {
+				return nome;
+			};
+			this.setNome = function (value) {
+				nome = value;
+			};
+		}
+
+		function PessoaJuridica() {
+			var cnpj;
+			this.getCNPJ = function () {
+				return cnpj;
+			};
+			this.setCNPJ = function (value) {
+				cnpj = value;
+			};
+		}
+
+		function PessoaFisica() {
+			var cpf;
+			this.getCPF = function () {
+				return cpf;
+			};
+			this.setCPF = function (value) {
+				cpf = value;
+			};
+		}
+
+
+		PessoaFisica.prototype = new Pessoa();
+		PessoaJuridica.prototype = new Pessoa();
+
+
+		nPessoaFisica = new PessoaFisica();
+		nPessoaJuridica = new PessoaJuridica();
+		nPessoaFisica.setCPF('111111');
+		nPessoaFisica.setNome('Pedro Vieira');
+		nPessoaJuridica.setCNPJ('222222');
+		nPessoaJuridica.setNome('Solares do Brasil ');
+		alert(nPessoaFisica.getNome() + '\n' + nPessoaFisica.getCPF() + '\n' + nPessoaJuridica.getNome() + '\n' + nPessoaJuridica.getCNPJ());
+	</script>
+</body>
+
+</html>

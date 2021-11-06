@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Teste Armazenamento de Cookie</title>
+
+    <script>
+        hoje = new Date();
+
+
+        function criaCookie() {
+            var linha1 = document.form1.seunome.value;
+            var linha2 = "*" + document.URL;
+            var linha3 = "*" + hoje.toGMTString();
+            document.cookie = linha1 + linha2 + linha3;
+        };
+
+        function mostraCookie() {
+            meuCookie = document.cookie;
+            dados = meuCookie.split("*");
+            alert("Dados do Cookie: nome:" + dados[0] +
+                "\n página:" + dados[1] + "\n data: " + dados[2]);
+        };
+
+
+        function getCookie(cookieSeuNome) {
+            var c_name = document.cookie; // listando o nome de todos os cookies
+            if (c_name != undefined && c_name.length > 0) // verificando se o mesmo existe
+            {
+                var posCookie = c_name.indexOf(cookieSeuNome); // checando se existe o cookieS+ euNome 
+                if (posCookie >= 0) {
+                    alert("Cookie Existe!!!");
+                } else {
+                    alert("Cookie não existe!!!");
+                }
+            }
+        };
+
+
+        function limpaCookie() {
+            if (getCookie(document.form1.seunome.value)) {
+                document.cookie = document.form1.seunome.value + "=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h2 align="center"> Grava e carrega dados do Cookie </h2>
+    <form name="form1">
+        Seu nome:
+        <br>
+        <input type="text" name="seunome" size="10" onChange="criaCookie()">
+    </form>
+    <input type="button" value="Ler cookie" onClick="mostraCookie();">
+    <br>
+    <br>
+
+
+    <input type="button" value="Limpar Cookie" onClick="limpaCookie();">
+</body>
+
+</html>

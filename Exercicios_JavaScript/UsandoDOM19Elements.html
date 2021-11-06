@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Imprime Mensagem</title>
+
+	<script>
+		i = 0;
+
+		function publicidade() {
+			texto = "Mensagem bem grande a ser mostrada......" 
+		
+			document.form1.elements[0].value = texto.substring(i, texto.length) + texto.substring(0, i - 1);
+
+			if (i < texto.length) {
+				i++;
+			} else {
+				i = 0;
+			}
+
+			window.setTimeout("publicidade();", 350);
+		}
+	</script>
+</head>
+
+<body onLoad="publicidade();" bgcolor="#000000">
+	<center>
+		<form name="form1">
+			<input type="text" name="texto" size="40">
+		</form>
+	</center>
+</body>
+
+</html>

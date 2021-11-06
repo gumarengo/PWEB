@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funcao Construtora</title>
+</head>
+
+<body>
+    <script>
+        function Person(first, last, age) {
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+            var bankBalance = 7500;
+
+            var returnBalance = function () { //metodo privado
+                return bankBalance;
+            };
+
+            // CRIANDO MÉTODO PÚBLICO PARA RETORNAR MÉTODO PRIVADO
+            this.askTeller = function () {
+                return returnBalance;
+            }
+        }
+
+        var john = new Person('John', 'Smith', 30);
+        console.log(john.returnBalance); //undefined
+        var myBalanceMethod = john.askTeller();
+        var myBalance = myBalanceMethod();
+        console.log(myBalance); //7500
+    </script>
+
+</body>
+
+</html>

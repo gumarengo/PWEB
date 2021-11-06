@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Try catch</title>
+
+    <script>
+        var message;
+        var x = 8;
+        
+        message.innerHTML = "";
+
+        try {
+            if (x == "") 
+                throw "vazio!!";
+            
+            if (isNaN(x)) 
+                throw "não é nº!!";
+           
+            x = Number(x);
+            
+            if (x < 1) 
+                throw "menor que 1";
+            
+            if (x > 9) 
+                throw "maior que 9";
+            
+            if ((x >= 1) && (x <= 9)) {
+                alert("está tudo ok!!!");
+            };
+        } catch (err) {
+            message.innerHTML = err;
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

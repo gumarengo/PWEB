@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Console</title>
+
+
+</head>
+
+<body>
+    <ol class="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+
+    <script>
+        var list = document.querySelector('.myList');
+
+        // lista um objeto ou string
+        console.log(list);
+
+        // lista varios objetos ou string
+        console.info("texto", list);
+
+        console.assert(list.childNodes.length > 10, "List tem menos que 10 itens");
+        console.assert(document.querySelector('#foo'), "id=foo não encontrado");
+        // nao vai aparecer porque existe o body
+        console.assert(document.querySelector('body'), "não encontrado elemento body");
+
+        console.log("Teste Nivel");
+        console.group(); // recua para direita
+        console.log("Nivel 2");
+        console.group(); // recua para direita
+        console.log("Nivel 3");
+        console.warn("Maior que Nivel 3"); // emite uma mensagem de alerta
+        console.error("%s (%i)", "Maior que Nivel",3); // igual a warn (todos eles permitem                                                  //substituição de strings)
+        console.groupEnd(); // recua para esquerda
+        console.log("Volta Nivel 2");
+        console.groupEnd(); //recua para esquerda
+        console.debug("Volta Nivel 1");
+
+        console.time("answer time");
+        alert("Click para continuar");
+        console.timeEnd("answer time");
+
+
+        function externa() {
+            function interna() {
+                console.trace();
+            }
+            interna();
+        }
+        
+       externa(); // chama função externa;
+    </script>
+</body>
+
+</html>

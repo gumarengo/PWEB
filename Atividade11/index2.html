@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convertendo variáveis</title>
+    <script>
+		function Conta() {
+			var nome;
+			this.getNome = function () {
+				return nome;
+			};
+			this.setNome = function (value) {
+				nome = value;
+			};
+
+			var banco;
+			this.getBanco = function () {
+				return banco;
+			};
+			this.setBanco = function (value) {
+				banco = value;
+			};
+		
+			var numeroConta;
+			this.getConta = function () {
+				return numeroConta;
+			};
+			this.setConta = function (value) {
+				numeroConta = value;
+			};
+
+			var saldo;
+			this.getSaldo = function () {
+				return saldo;
+			};
+			this.setSaldo = function (value) {
+				saldo = value;
+			};
+		};
+
+		function Corrente() {
+			var saldoEspecial;
+			this.getEspecial = function () {
+				return saldoEspecial;
+			};
+			this.setEspecial = function (value) {
+				saldoEspecial = value;
+		    };
+        };
+
+		function Poupanca() {
+			var juros;
+			this.getJuros = function () {
+				return juros;
+			};
+			this.setJuros = function (value) {
+				juros = value;
+		    };
+
+            var dataVcmto;
+			this.getDataVcmto = function () {
+				return dataVcmto;
+			};
+			this.setDataVcmto = function (value) {
+				dataVcmto = value;
+		    };
+        };
+
+		Corrente.prototype = new Conta();
+		Poupanca.prototype = new Conta();
+
+
+		ContaCorrente = new Corrente();
+		ContaPoupanca = new Poupanca();
+
+		ContaCorrente.setNome('Joao da Silva');
+        ContaCorrente.setBanco('Banco do Brasil');
+        ContaCorrente.setConta('111111-x');
+        ContaCorrente.setSaldo('R$123456.78');
+        ContaCorrente.setEspecial('R$ 4.00');
+
+        ContaPoupanca.setNome('Silva Joao');
+        ContaPoupanca.setBanco('Mercantil');
+        ContaPoupanca.setConta('999999-x');
+        ContaPoupanca.setSaldo('R$555.55');
+        ContaPoupanca.setJuros('6%');
+        ContaPoupanca.setDataVcmto('01/01/2022');
+
+
+		alert(ContaCorrente.getNome() + '\n' + ContaCorrente.getBanco() + '\n' + ContaCorrente.getConta() + '\n' + ContaCorrente.getSaldo() + '\n' + ContaCorrente.getEspecial()); 
+            
+        alert(ContaPoupanca.getNome() + '\n' + ContaPoupanca.getBanco() + '\n' + ContaPoupanca.getConta() + '\n' + ContaPoupanca.getSaldo() + '\n' + ContaPoupanca.getJuros()  + '\n' + ContaPoupanca.getDataVcmto()); 
+        
+	</script>
+</head>
+
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Console</title>
+
+
+</head>
+
+<body>
+    <script> // abra o profiles antes de executar
+        function getById(id) {
+            return document.getElementById(id);
+        }
+
+        function getViaSelector(id) {
+            return document.querySelector(id);
+        }
+
+        var numeroVezes = 20000;
+
+        console.profile("Testando getElementById() x querySelector()");
+        
+        for (var i = 0; i < numeroVezes; ++i)
+            getById("teste");
+        
+        for (var i = 0; i < numeroVezes; ++i)
+            getViaSelector("teste");
+        
+        console.profileEnd();
+    </script>
+</body>
+
+</html>

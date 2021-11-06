@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando in</title>
+
+</head>
+
+<body>
+    <script>
+        //matriz
+        var nomes = new Array("Ana", "Laura", "Clara", "Isabela", "Isadora");
+        
+        if (0 in nomes) {
+            alert("existe a posicao 0");
+        }
+        else {
+            alert("nao existe a posicao 0");
+        }
+
+        if (5 in nomes) {
+            alert("existe a posicao 5");
+        }
+        else {
+            alert("nao existe a posicao 5");
+        }
+
+
+
+        if ("length" in nomes) {
+            alert("existe a propriedade length em nomes (vem de array))");
+
+        }
+    </script>
+
+</body>
+
+</html>

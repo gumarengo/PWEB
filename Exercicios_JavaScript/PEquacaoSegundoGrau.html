@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Retorna o valor de delta
+        var delta = function(a, b, c) {
+            return b * b - 4 * a * c;
+        }
+
+        // Retorna o valor da primeira raiz
+        var raiz1 = function(a, b, c) {
+            return (-b + Math.sqrt(delta(a, b, c))) / 2 * a;
+        }
+
+        // Retorna o valor da segunda raiz
+        var raiz2 = function(a, b, c) {
+            return (-b - Math.sqrt(delta(a, b, c))) / 2 * a;
+        }
+
+        var valorA;
+        var valorB;
+        var valorC;
+
+        valorA = parseFloat(prompt("Digite o valor de a"));
+        valorB = parseFloat(prompt("Digite o valor de b"));
+        valorC = parseFloat(prompt("Digite o valor de c"));
+
+
+        var deltaX = delta(valorA, valorB, valorC);
+
+        if (deltaX == 0) {
+            alert("raiz 1=raiz 2-->" + raiz1(valorA, valorB, valorC));
+        } else {
+
+            if (deltaX < 0) {
+                alert("Não existem raizes reais!")
+            } else {
+                alert("raiz1=" + raiz1(valorA, valorB, valorC) + " raiz2=" + raiz2(valorA, valorB, valorC));
+            }
+        }
+    </script>
+
+</body>
+
+</html>

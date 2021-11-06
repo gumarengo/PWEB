@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste ponto e vírgula</title>
+
+    <script>
+        function foo1() {
+            // ...
+            return 'Uma string muito grande que não cabe na linha de cima'
+        }
+
+        // é o mesmo que
+        function foo2() {
+            // ...
+            return;
+            'Uma string muito grande que não cabe na linha de cima';
+        }
+
+        var x = foo1();
+        alert(x);
+
+        var x2 = foo2();
+        alert(x2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

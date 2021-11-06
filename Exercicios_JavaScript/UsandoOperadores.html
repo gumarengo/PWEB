@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Utilizando variáveis</title>
+
+    <script>
+     
+        var x = 4; // 0100
+        var y = 2; // 0010
+
+        alert("x & y  " + (x & y));
+
+        alert("x | y " + (x | y));
+
+        alert("x ^ y " + (x ^ y));
+
+        /* O operador ~ ( Bitwise NOT ) diferente dos operadores anteriores, é um operador que afeta apenas um operando, incrementando(++) e invertendo seu sinal, de positivo para negativo e vice versa. 
+            
+          */
+        
+        alert("~x " + (~x));
+
+        // (desloca 2 bits de x esquerda)  0100 para 10000 (preenche com zeros a direita)
+
+        alert("x << y " + (x << y));
+        
+ // (desloca 2 bits de x direita)  0100 para 0001)
+        alert("x >> y " + (x >> y));
+
+        // (desloca 2 bits de x esquerda)  0100 para 0001 preenche com zeros a esquerda)
+        alert("x >>> y " + (x >>> y));
+        
+        
+    </script>
+</head>
+
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Criando objetos </title>
+	</script>
+</head>
+
+<body>
+	<script>
+		function Aluno(xNome, xRa) {
+			this.nome = xNome;
+			this.ra = xRa;
+		}
+        var ObjAluno = new Aluno("João", 123);
+		ObjAluno.teste = "novo";
+
+		alert(ObjAluno.nome + ObjAluno.ra + ObjAluno.teste);
+
+		Aluno.prototype.novocampo = "olha";
+
+		var ObjAluno2 = new Aluno("José", 45);
+
+		alert(ObjAluno2.nome + ObjAluno2.ra + ObjAluno2.teste + ObjAluno2.novocampo); // teste fica com undefined
+
+	</script>
+
+</body>
+
+</html>

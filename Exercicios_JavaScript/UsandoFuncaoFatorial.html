@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Testando IF</title>
+
+    <script>
+        function fatorial(n) {
+            if ((n == 0) || (n == 1))
+                return 1;
+            else
+                return (n * fatorial(n - 1));
+        }
+
+
+        alert("primeiro caso=" + fatorial(4));
+
+        var fator = function (n) {
+            if ((n == 0) || (n == 1))
+                return 1;
+            else
+                return (n * fatorial(n - 1));
+        }
+
+
+        alert("segundo caso=" + fator(4));
+    </script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando Conversão de tipos</title>
+
+
+</head>
+
+<body>
+
+    <script>
+        var num1 = Number("Boa Noite!") //NaN 
+        var num2 = Number(""); //0 
+        var num3 = Number("000011"); //11 
+        var num4 = Number(true); //1 
+        var num5 = Number("1.125"); //1.125
+        var num6 = Number(5.78657); //5.78657
+        var num7 = Number("00.5"); //0.5
+
+
+        alert("num1=" + num1 + "\n num2=" + num2 + "\n num3=" + num3 + "\n num4=" + num4 + "\n num5=" + num5 + "\n num6=" + num6 + "\n num7=" + num7);
+
+
+        var num10 = parseInt("1234 feijaonoprato"); //1234 
+        var num20 = parseInt(""); //NaN 
+        var num30 = parseInt("0xA"); //10 - hexadecimal 
+        var num40 = parseInt("546.5"); //546
+        var num50 = parseInt("70"); //70 - decimal 
+        var num60 = parseInt("0xf"); //15 - hexadecimal 
+        var num70 = parseInt("-50"); // -50
+        var num80 = parseInt("  1 6 0"); //1
+
+
+
+        alert("num10=" + num10 + "\n num20=" + num20 + "\n num30=" + num30 + "\n num40=" + num40 + "\n num50=" + num50 + "\n num60=" + num60 + "\n num70=" + num70 + "\n num80=" + num80);
+
+
+        var num100 = parseFloat("1234 feijaonoprato"); //1234 - inteiro 
+        var num200 = parseFloat("0xA"); //0 
+        var num300 = parseFloat("22.5"); //22.5 
+        var num400 = parseFloat("22.34.5"); //22.34 
+        var num500 = parseFloat("0908.5"); //908.5 
+        var num600 = parseFloat("3.125e7"); //31250000 
+        var num700 = parseFloat("22.578"); //22.578
+        var num800 = parseFloat("22.578").toFixed(2); //22.58
+        var num900 = parseFloat("22.578").toPrecision(2); //23
+        var num1000 = parseFloat("22.578").toPrecision(3); //22.6
+
+
+
+        alert("num100=" + num100 + "\n num200=" + num200 + "\n num300=" + num300 + "\n num400=" + num400 + "\n num500=" + num500 + "\n num600=" + num600 +
+            "\n num700=" + num700 + "\n num800=" + num800 + "\n num90=" + num900 + "\n num1000=" + num1000);
+    </script>
+</body>
+
+</html>
