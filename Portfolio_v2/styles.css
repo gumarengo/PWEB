@@ -15,7 +15,7 @@ section{
 .banner{
     position: relative;
     min-height: 100vh;
-    background: url(/Portfolio/img/banner2.jpg);
+    background: url(/Portfolio_v2/img/banner2.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -146,7 +146,7 @@ header.sticky ul li a{
 }
 .contentBox p {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 10px; 
 }
 
@@ -190,8 +190,9 @@ img{
 
 .spaceJam p {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;  
+    padding: 10px ;
 }
 
 .boxJam {
@@ -221,7 +222,7 @@ img{
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    color: #111;
+    color: #01203F;
 }
 
 .contato h2{
@@ -239,6 +240,7 @@ img{
     margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
+    color: #01203F;
 }
 
 .contato_conteudo p {
@@ -251,9 +253,87 @@ img{
     margin-top: 10px;
 }
 
-.formBx {
-    min-width: 50%;
+.contatoInfoBX{
     position: relative;
+    color: #01203F;
+}
+.contatoInfoBX .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contatoInfoBX .box .icon {
+    min-width: 40px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.contatoInfoBX .box .text {
+    display: flex;
+    margin-left: 15px;
+    font-size: 15px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contatoInfoBX h3{
+    font-weight:bold;
+    font-size: 25px;
+
+}
+
+.formBx {
+    min-width: 65%;
+    position: relative;
+    color: #01203F;
+}
+
+.formBx form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    resize: none;
+}
+
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input[type="submit"]{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.formBx form input[type="submit"]{
+    max-width: 300px;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.formBx form input[type="submit"]:hover {
+    box-shadow: 0 0 10px #BABAC4,
+    0 0 30px #BABAC4,
+    0 0 70px #BABAC4;
 }
 
 footer{
@@ -325,7 +405,7 @@ footer .wave {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url(/Portfolio/img/wave.png);
+    background: url(/Portfolio_v2/img/wave.png);
     background-size: 1000px 100px;
 }
 
